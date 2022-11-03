@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="./images/pizza.jpg" width="100px" height="100px" alt="pizza logo">
+    </a>
+  </header>
+
+  <main class="site-main">
+    <section>
+      <div class="container">
+        <div class="s1">
+          <h1 style="margin: 0 auto 40px auto;">Pitsaga buyurtma qilish</h1>
+          <div class="s1__box">
+            <div class="s1__ordering">
+              <form id="form">
+                <h3 style="margin-bottom: 10px;">Nomi qanday bo'lsin?</h3>
+                <label>
+                  <select class="s1__thickness" onclick="thickness()">
+                    <option value="Yupqa">Yupqa</option>
+                    <option value="O'rtacha">O'rtacha</option>
+                    <option value="Qalin">Qalin</option>
+                  </select>
+                </label>
+                <h3 style="margin-top: 35px; margin-bottom: 10px;">Kattaligi</h3>
+                <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                  <label class="s1__size-box">
+                    25 sm
+                    <input class="s1__size" onclick="go()" name="kattaligi" type="radio" value="25 sm">
+                  </label>
+                  <label class="s1__size-box">
+                    30 sm
+                    <input class="s1__size" onclick="go()" name="kattaligi" type="radio" value="30 sm">
+                  </label>
+                  <label class="s1__size-box">
+                    35 sm
+                    <input class="s1__size" onclick="go()" name="kattaligi" type="radio" value="35 sm">
+                  </label>
+                </div>
+                <h3 style="margin-bottom: 10px;">Ustiga nima solaylik?</h3>
+                <div class="s1__checkboxes">
+                  <div style="width: 50%; display: flex; flex-direction: column;">
+                    <label style="margin-bottom: 20px;">
+                      <input class="s1__checkbox" name="pomidor" type="checkbox" value="pomidor">
+                      Pomidor
+                    </label>
+                    <label style="margin-bottom: 20px;">
+                      <input class="s1__checkbox" name="pomidor" type="checkbox" value="kurka go'shti">
+                      Kurka go'shti 
+                    </label>
+                    <label style="margin-bottom: 20px;">
+                      <input class="s1__checkbox" name="pomidor" type="checkbox" value="qazi">
+                      Qazi
+                    </label>
+                  </div>
+                  <div style="width: 50%; display: flex; flex-direction: column;">
+                    <label style="margin-bottom: 20px;">
+                      <input class="s1__checkbox" name="pomidor" type="checkbox" value="tuzlangan bodiring">
+                      Tuzlangan bodiring
+                    </label>
+                    <label style="margin-bottom: 20px;">
+                      <input class="s1__checkbox" name="pomidor" type="checkbox" value="qo'ziqorin">
+                      Qo'ziqorin
+                    </label>
+                    <label style="margin-bottom: 20px;">
+                      <input class="s1__checkbox" name="pomidor" type="checkbox" value="zaytun">
+                      Zaytun
+                    </label>
+                  </div>
+                </div>
+                <h3 style="margin-bottom: 10px;">Qo'shimchalar</h3>
+                <div class="s1__addcheckboxes" style="display: flex; justify-content: space-between;">
+                  <label style="width: 50%;">
+                    <input class="s1__addcheckbox" name="add" type="checkbox" value="achchiq">
+                    Achchiq
+                  </label>
+                  <label style="width: 50%;">
+                    <input class="s1__addcheckbox" name="add" type="checkbox" value="sosiskali">
+                    Sosiskali
+                  </label>
+                </div>
+              </form>
+            </div>
+            <div class="s1__ordered">
+              <h4 class="s1__out" style="margin-bottom: 30px;">Non:&nbsp;<span class="thickness-checked"></span></h4>
+              <h4 class="s1__out" style="margin-bottom: 30px;">Kattaligi:&nbsp;<span class="size-checked"></span></h4>
+              <h4 class="s1__out" style="margin-bottom: 4px;"> Ustida:</h4>
+              <span class="on-checked" style="margin-bottom: 30px;"></span>
+              <h4 class="s1__out" style="margin-bottom: 4px;"> Qo'shimchalar:</h4>
+              <span class="on-addchecked" style="margin-bottom: 30px;"></span>
+              <button class="btn-submit" type="submit" form="form">Buyurtma berish</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal" style="display: none;">
+          <div class="in-modal">
+            <strong class="alert">
+              SIZ BUYURTMA SAHIFASINI TO'LDIRMADINGIZ <br>
+              TO'LDIRISH UCHUN QAYTA TO'LDIRISH TUGMASINI BOSING
+            </strong>
+            <button class="btn-modal" type="button">Qayta to'ldirish</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <span>Savollar uchun &nbsp;</span>
+        <a href="https://t.me/kkk001130">Telegram akkauntimga muroajaat qiling</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
